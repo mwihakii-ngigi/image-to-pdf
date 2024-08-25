@@ -29,6 +29,9 @@ class ImageToPDFConverter:
         convert_button = tk.Button(self.root, text="Convert to PDF", command=self.convert_images_to_pdf)
         convert_button.pack(pady=(20, 40))
 
+    def select_images(self):
+        self.image_paths = filedialog.askopenfilenames(title="Select Images", )
+
         
 def main():
     root = tk.Tk()
